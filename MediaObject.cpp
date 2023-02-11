@@ -42,5 +42,5 @@ void MediaObject::display(std::ostream& output)  const {
 
 void MediaObject::play() const {
     this->display(std::cerr);
-    std:cerr << "This function shouldn't have been called, check for an error." << std::endl;
+    std::cerr << "This function shouldn't have been called, check for an error." << std::endl;
 }

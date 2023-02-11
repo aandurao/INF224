@@ -19,7 +19,7 @@ protected:
     unsigned int duration{};
 public:
     /**
-     * Default constructor for Videos
+     * Default constructor for Video
      */
     Video() : MediaObject("Video", ""), duration(0) {};
 

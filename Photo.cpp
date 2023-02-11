@@ -14,7 +14,7 @@ void Photo::setLongitude(const float lo) {
 
 void Photo::display(std::ostream& output) const {
     MediaObject::display(output);
-    output << "Type : Photo Latitude : " + std::to_string(lat) + " Longitude : " + std::to_string(lon);
+    output << "Type : Photo Latitude : " + std::to_string(lat) + " Longitude : " + std::to_string(lon) << std::endl;
 }
 
 void Photo::play() const {

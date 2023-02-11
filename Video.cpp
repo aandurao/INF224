@@ -12,7 +12,7 @@ int Video::getDuration() const {return duration;}
 
 void Video::display(std::ostream& output) const {
     MediaObject::display(output);
-    output << "Type : Video Duration : " + std::to_string(duration);
+    output << "Type : Video Duration : " + std::to_string(duration) << std::endl;
 }
 
 void Video::play() const {
