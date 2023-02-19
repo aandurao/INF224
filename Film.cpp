@@ -19,7 +19,7 @@ int * Film::getChapters() {
 }
 
 void Film::setChapters(unsigned int n_chaps, int * chaps) {
-    if(n_chaps != chapters_num) {
+    if(n_chaps != chapters_num || chapters == nullptr) {
         delete [] chapters;
         chapters_num = n_chaps;
         chapters = new int[chapters_num];
@@ -32,8 +32,13 @@ void Film::setChapters(unsigned int n_chaps, int * chaps) {
 
 void Film::display(std::ostream &output) const {
     MediaObject::display(output);
-    output << "Type : Film Duration : " + std::to_string(duration) + " Number of chapters : " + std::to_string(chapters_num) << std::endl;
+    output << "Type : Film\nDuration : " + std::to_string(duration) + "\nNumber of chapters : " + std::to_string(chapters_num) << std::endl;
     for(unsigned int i=0; i<chapters_num; i++) {
         output << "Duration of chapter " << i << " : " << chapters[i] << std::endl;
     }
+}
+
+Film::~Film() {
+    delete [] chapters;
+    std::cout << "Film named " << this->name << " is being deleted !";
 }

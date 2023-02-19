@@ -24,12 +24,17 @@ public:
     Video() : MediaObject("Video", ""), duration(0) {};
 
     /**
+     * Destructor for Video
+     */
+    ~Video() {std::cout << "Video named " << this->name << " is being deleted !";};
+
+    /**
      * Constructor for Video
      * @param n name of the Video object
      * @param p path to the file linked with the Video object
      * @param d duration of the video
      */
-    Video(const std::string n, const std::string p, const unsigned int d) : MediaObject(n,p), duration(d) {}
+    Video(const std::string n, const std::string p, const unsigned int d) : MediaObject(n,p), duration(d) {};
 
     /**
      * @return the duration of the video (in seconds).

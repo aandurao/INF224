@@ -14,14 +14,17 @@ void Photo::setLongitude(const float lo) {
 
 void Photo::display(std::ostream& output) const {
     MediaObject::display(output);
-    output << "Type : Photo Latitude : " + std::to_string(lat) + " Longitude : " + std::to_string(lon) << std::endl;
+    output << "Type : Photo \nLatitude : " + std::to_string(lat) + " Longitude : " + std::to_string(lon) << std::endl;
 }
 
 void Photo::play() const {
     if(pathname != "") {
         std::string arg;
-        std::cout << "Playing " + pathname;
         arg = "imagej " + pathname + " &";
         std::system(arg.data());
     }
+}
+
+Photo::~Photo() {
+    std::cout << "Photo named " << this->name << " is being deleted !";
 }

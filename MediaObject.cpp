@@ -3,7 +3,6 @@
 //
 
 #include <string>
-#include <iostream>
 #include "MediaObject.h"
 
 MediaObject::MediaObject(){
@@ -17,7 +16,7 @@ MediaObject::MediaObject(const std::string n,const std::string p) {
 }
 
 MediaObject::~MediaObject(){
-    std::cerr<<"Getting rid of MediaObject : " + MediaObject::getName();
+    std::cerr<<"Getting rid of MediaObject : " + MediaObject::getName() << std::endl;
 }
 
 std::string MediaObject::getName() const {
@@ -37,7 +36,7 @@ void MediaObject::setPathname(const std::string p) {
 }
 
 void MediaObject::display(std::ostream& output)  const {
-    output << "MediaObject : " + name + " Location : " + pathname << std::endl;
+    output << "MediaObject : " + name + " \nLocation : " + pathname << std::endl;
 }
 
 void MediaObject::play() const {

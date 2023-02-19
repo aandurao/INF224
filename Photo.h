@@ -53,6 +53,8 @@ public:
     void display(std::ostream& output) const override;
 
     void play() const override;
+
+    ~Photo();
 };
 
 

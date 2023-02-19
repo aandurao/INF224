@@ -38,6 +38,16 @@ public:
     void setChapters(unsigned int n_chaps, int * chaps);
 
     void display(std::ostream& output) const override;
+
+    ~Film();
+
+    Film& operator=(const Film& copied) {
+        Video::operator=(copied);
+        chapters = nullptr;
+        chapters_num = copied.chapters_num + 1;
+        setChapters(copied.chapters_num, copied.chapters);
+        return *this;
+    }
 };
 
 
