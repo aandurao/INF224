@@ -36,7 +36,7 @@ void MediaObject::setPathname(const std::string p) {
 }
 
 void MediaObject::display(std::ostream& output)  const {
-    output << "MediaObject : " + name + " \nLocation : " + pathname << std::endl;
+    output << "MediaObject : " + name + " ;Location : " + pathname << ";";
 }
 
 void MediaObject::play() const {

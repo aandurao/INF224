@@ -14,7 +14,7 @@ PROG = MultiMediaPlayer
 #
 # Fichiers sources (NE PAS METTRE les .h ni les .o seulement les .cpp)
 #
-SOURCES = MediaObject.cpp main.cpp Photo.cpp Video.cpp Film.cpp MediaGroup.cpp
+SOURCES = MediaObject.cpp main.cpp Photo.cpp Video.cpp Film.cpp MediaGroup.cpp Database.cpp tcpserver.cpp ccsocket.cpp
 
 #
 # Fichiers objets (ne pas modifier sauf si l'extension n'est pas .cpp)

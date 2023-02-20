@@ -32,9 +32,9 @@ void Film::setChapters(unsigned int n_chaps, int * chaps) {
 
 void Film::display(std::ostream &output) const {
     MediaObject::display(output);
-    output << "Type : Film\nDuration : " + std::to_string(duration) + "\nNumber of chapters : " + std::to_string(chapters_num) << std::endl;
+    output << "Type : Film;Duration : " + std::to_string(duration) + ";Number of chapters : " + std::to_string(chapters_num) << ";";
     for(unsigned int i=0; i<chapters_num; i++) {
-        output << "Duration of chapter " << i << " : " << chapters[i] << std::endl;
+        output << "Duration of chapter " << i << " : " << chapters[i] << ";";
     }
 }
 
